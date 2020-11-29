@@ -113,7 +113,7 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
+      <div id="dashboard" class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
           <div class="col-lg-4 col-12">
@@ -166,6 +166,653 @@
         </div>
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
+
+      <div id="manage-customers" class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row" style="display: flex; justify-content: center">
+            <div class="col-lg-4 col-12">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>150</h3>
+
+                        <p>Customers</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- ./col -->
+
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row" >
+            <!--fill the forms here-->
+            <div class="card card-primary" style="width: 100%">
+                <div class="card-header" style="background-color: lightblue">
+                    <h3 class="card-title">Customer Details</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start ------>
+                <form role="form">
+                    <div class="card-body">
+                        <!--input customer details-->
+                        <div class="form-group-wrapper" style="display: flex; justify-content: space-between">
+                            <div class="form-group" style="flex: 1">
+                                <label for="exampleInputCustomerId">ID</label>
+                                <input type="text" class="form-control" id="exampleInputCustomerId" placeholder="Enter ID">
+                            </div>
+                            <div class="form-group" style="flex: 2; margin-left: 10px">
+                                <label for="exampleInputName">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName" placeholder="Enter name">
+                            </div>
+                            <div class="form-group" style="flex: 3; margin-left: 10px">
+                                <label for="exampleInputAddress">Address</label>
+                                <input type="text" class="form-control" id="exampleInputAddress" placeholder="Enter address">
+                            </div>
+                            <div class="form-group" style="flex: 1; margin-left: 10px">
+                                <label for="exampleInputSalary">Salary</label>
+                                <input type="number" class="form-control" id="exampleInputSalary" placeholder="Enter salary">
+                            </div>
+                        </div>
+                        <div class="form-group-wrapper" style="display: flex; justify-content: space-between">
+                            <div class="form-group" style="width: 75%">
+                                <label for="exampleSearchDetails">Search</label>
+                                <div style="display: flex;" >
+                                    <input type="text" class="form-control" id="exampleSearchDetails" placeholder="Search here" >
+                                    <button type="submit" class="btn btn-primary" style="width: 200px; margin-left: 20px;  background-color: lightblue; color: black" ><b>Search</b></button>
+                                </div>
+                            </div>
+                            <div class="form-group" style="display:flex; justify-content: space-around;" >
+                                <button type="submit" class="btn btn-primary" style="width: 150px; margin-top: 30px; margin-left: 10px; background-color: lightblue; color: black"><b>Save</b></button>
+                                <button type="submit" class="btn btn-primary" style="width: 150px; margin-top: 30px; margin-left: 10px; background-color: lightblue; color: black"><b>Edit</b></button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <!--if need, edit the footer-->
+                        <div class="form-group">
+                           <!-- <label for="exampleSearchDetails">Search</label>
+                            <div style="display: flex;" >
+                                <input type="text" class="form-control" id="exampleSearchDetails" placeholder="Search here" style="width: 50%">
+                                <button type="submit" class="btn btn-primary" style="width: 200px; margin-left: 20px" >Search</button>
+                            </div>-->
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.row (main row) -->
+        <div class="card">
+            <div class="card-header" style="background-color:lightblue">
+                <h3 class="card-title" style="color: white">DataTable - Customers</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable dtr-inline" role="grid" aria-describedby="example1_info">
+                    <thead>
+                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Customer ID</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Address</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Salary</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr role="row" class="odd">
+                        <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
+                        <td>Firefox 1.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.7</td>
+
+                    </tr><tr role="row" class="even">
+                        <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
+                        <td>Firefox 1.5</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+
+                    </tr><tr role="row" class="odd">
+                        <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
+                        <td>Firefox 2.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+
+                    </tr><tr role="row" class="even">
+                        <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
+                        <td>Firefox 3.0</td>
+                        <td>Win 2k+ / OSX.3+</td>
+                        <td>1.9</td>
+
+                    </tr><tr role="row" class="odd">
+                        <td class="sorting_1 dtr-control" tabindex="0">Gecko</td>
+                        <td>Camino 1.0</td>
+                        <td>OSX.2+</td>
+                        <td>1.8</td>
+
+                    </tr><tr role="row" class="even">
+                        <td class="sorting_1 dtr-control" tabindex="0">Gecko</td>
+                        <td>Camino 1.5</td>
+                        <td>OSX.3+</td>
+                        <td>1.8</td>
+
+                    </tr><tr role="row" class="odd">
+                        <td class="sorting_1 dtr-control" tabindex="0">Gecko</td>
+                        <td>Netscape 7.2</td>
+                        <td>Win 95+ / Mac OS 8.6-9.2</td>
+                        <td>1.7</td>
+
+                    </tr><tr role="row" class="even">
+                        <td class="sorting_1 dtr-control" tabindex="0">Gecko</td>
+                        <td>Netscape Browser 8</td>
+                        <td>Win 98SE+</td>
+                        <td>1.7</td>
+
+                    </tr><tr role="row" class="odd">
+                        <td class="sorting_1 dtr-control" tabindex="0">Gecko</td>
+                        <td>Netscape Navigator 9</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+
+                    </tr><tr role="row" class="even">
+                        <td class="sorting_1 dtr-control" tabindex="0">Gecko</td>
+                        <td>Mozilla 1.0</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1</td>
+
+                    </tr></tbody>
+                    <tfoot>
+                    <tr><th rowspan="1" colspan="1">Customer ID</th><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Address</th><th rowspan="1" colspan="1">Salary</th></tr>
+                    </tfoot>
+                </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+            </div>
+            <!-- /.card-body -->
+        </div>
+      </div><!-- /.container-fluid -->
+
+      <div id="manage-items" class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row" style="display: flex; justify-content: center">
+          <div class="col-lg-4 col-12">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                  <div class="inner">
+                      <h3>53</h3>
+
+                      <p>Items</p>
+                  </div>
+                  <div class="icon">
+                      <i class="fas fa-list-ol"></i>
+                  </div>
+              </div>
+          </div>
+          <!-- ./col -->
+      </div>
+      <!-- /.row -->
+      <!-- Main row -->
+      <!--form - item details----------------------------------------------------------------------------->
+      <div class="row" style="display: flex; justify-content: center">
+          <div class="row" style="width: 100%">
+              <!--fill the forms here-->
+              <div class="card card-primary" style="width: 100%" >
+                  <div class="card-header" style="background-color: limegreen">
+                      <h3 class="card-title"><b>Item Details</b></h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <form role="form">
+                      <div class="card-body">
+                          <!--input customer details-->
+                          <div class="form-group-wrapper" style="display: flex; justify-content: space-between">
+                              <div class="form-group" style="flex: 1">
+                                  <label for="exampleInputCustomerId">ID</label>
+                                  <input type="text" class="form-control" id="exampleInputCustomerId" placeholder="Enter ID">
+                              </div>
+                              <div class="form-group" style="flex: 2; margin-left: 10px">
+                                  <label for="exampleInputName">Description</label>
+                                  <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Description">
+                              </div>
+                              <div class="form-group" style="flex: 1; margin-left: 10px">
+                                  <label for="exampleInputAddress">Unit Price</label>
+                                  <input type="number" class="form-control" id="exampleInputAddress" placeholder="Enter unit price">
+                              </div>
+                              <div class="form-group" style="flex: 1; margin-left: 10px">
+                                  <label for="exampleInputSalary">Qty on Hand</label>
+                                  <input type="number" class="form-control" id="exampleInputSalary" placeholder="Enter Qty">
+                              </div>
+                          </div>
+                          <div class="form-group-wrapper" style="display: flex; justify-content: space-between">
+                              <div class="form-group" style="width: 75%">
+                                  <label for="exampleSearchDetails">Search</label>
+                                  <div style="display: flex;">
+                                      <input type="text" class="form-control" id="exampleSearchDetails" placeholder="Search here">
+                                      <button type="submit" class="btn btn-primary" style="width: 200px; margin-left: 20px; background-color: limegreen; color: black"><b>Search</b></button>
+                                  </div>
+                              </div>
+                              <div class="form-group" style="display:flex; justify-content: space-around;">
+                                  <button type="submit" class="btn btn-primary" style="width: 150px; margin-top: 30px; margin-left: 10px; background-color: limegreen; color: black" ><b>Save</b></button>
+                                  <button type="submit" class="btn btn-primary" style="width: 150px; margin-top: 30px; margin-left: 10px; background-color: limegreen; color: black"><b>Edit</b></button>
+                              </div>
+
+                          </div>
+                      </div>
+                      <!-- /.card-body -->
+
+                      <div class="card-footer">
+                          <!--if need, edit the footer-->
+                          <div class="form-group">
+                              <!-- <label for="exampleSearchDetails">Search</label>
+                               <div style="display: flex;" >
+                                   <input type="text" class="form-control" id="exampleSearchDetails" placeholder="Search here" style="width: 50%">
+                                   <button type="submit" class="btn btn-primary" style="width: 200px; margin-left: 20px" >Search</button>
+                               </div>-->
+                          </div>
+
+                      </div>
+                  </form>
+
+              </div>
+          </div>
+      </div>
+      <!-- /.row (main row) -->
+      <!--table - item details----------------------------------------------------------------------------->
+      <div class="row">
+          <div class="col-12">
+              <div class="card">
+                  <div class="card-header" style="background-color: limegreen">
+                      <h3 class="card-title" style="color:white;"><b>Table - Items</b></b></h3>
+
+                      <div class="card-tools">
+                          <div class="input-group input-group-sm" style="width: 150px;">
+                              <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                              <div class="input-group-append">
+                                  <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body table-responsive p-0" style="height: 300px;">
+                      <table class="table table-head-fixed text-nowrap">
+                          <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Description</th>
+                              <th>Unit price</th>
+                              <th>Qty on hand</th>
+
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>183</td>
+                              <td>John Doe</td>
+                              <td>11-7-2014</td>
+                              <td><span class="tag tag-success">Approved</span></td>
+
+                          </tr>
+                          <tr>
+                              <td>219</td>
+                              <td>Alexander Pierce</td>
+                              <td>11-7-2014</td>
+                              <td><span class="tag tag-warning">Pending</span></td>
+
+                          </tr>
+                          <tr>
+                              <td>657</td>
+                              <td>Bob Doe</td>
+                              <td>11-7-2014</td>
+                              <td><span class="tag tag-primary">Approved</span></td>
+
+                          </tr>
+                          <tr>
+                              <td>175</td>
+                              <td>Mike Doe</td>
+                              <td>11-7-2014</td>
+                              <td><span class="tag tag-danger">Denied</span></td>
+
+                          </tr>
+                          <tr>
+                              <td>134</td>
+                              <td>Jim Doe</td>
+                              <td>11-7-2014</td>
+                              <td><span class="tag tag-success">Approved</span></td>
+
+                          </tr>
+                          <tr>
+                              <td>494</td>
+                              <td>Victoria Doe</td>
+                              <td>11-7-2014</td>
+                              <td><span class="tag tag-warning">Pending</span></td>
+
+                          </tr>
+                          <tr>
+                              <td>832</td>
+                              <td>Michael Doe</td>
+                              <td>11-7-2014</td>
+                              <td><span class="tag tag-primary">Approved</span></td>
+
+                          </tr>
+                          <tr>
+                              <td>982</td>
+                              <td>Rocky Doe</td>
+                              <td>11-7-2014</td>
+                              <td><span class="tag tag-danger">Denied</span></td>
+
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+          </div>
+      </div>
+      </div><!-- /.container-fluid -->
+
+      <div id="place-orders" class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row" style="display: flex; justify-content:center;">
+
+            <div class="row" style="display: flex; justify-content: center; width: 100%" >
+                <div class="row" style="width: 100%">
+                    <!--fill the forms here-->
+                    <div class="card card-primary" style="width: 100%">
+                        <div class="card-header" style="background-color: indigo">
+                            <h3 class="card-title"><b>Select Details</b></h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <form role="form">
+                            <div class="card-body">
+                                <!--input customer details-->
+                                <div class="form-group-wrapper" style="display: flex; justify-content: space-between; align-items: flex-end">
+                                    <div class="form-group" style="flex: 1">
+                                        <label>Customer ID</label>
+                                        <select class="form-control select2bs4 select2-hidden-accessible" style="width: 100%;" data-select2-id="17" tabindex="-1" aria-hidden="true">
+                                            <option selected="selected" data-select2-id="19">Alabama</option>
+                                            <option data-select2-id="36">Alaska</option>
+                                            <option data-select2-id="37">California</option>
+                                            <option data-select2-id="38">Delaware</option>
+                                            <option data-select2-id="39">Tennessee</option>
+                                            <option data-select2-id="40">Texas</option>
+                                            <option data-select2-id="41">Washington</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group" style="flex: 2; margin-left: 10px;">
+                                        <input type="text" class="form-control" id="exampleInputName" placeholder="Customer name" >
+                                    </div>
+                                    <div class="form-group" style="flex: 3; margin-left: 10px">
+                                        <input type="text" class="form-control" id="exampleInputAddress" placeholder="Address">
+                                    </div>
+                                    <div class="form-group" style="flex: 1; margin-left: 10px">
+                                        <input type="number" class="form-control" id="exampleInputSalary" placeholder="Salary">
+                                    </div>
+                                </div>
+                                <div class="form-group-wrapper" style="display: flex; justify-content: space-between; align-items: flex-end">
+                                    <div class="form-group" style="flex: 1">
+                                        <label>Item code</label>
+                                        <select class="form-control select2bs4 select2-hidden-accessible" style="width: 100%;" data-select2-id="17" tabindex="-1" aria-hidden="true">
+                                            <option selected="selected" data-select2-id="19">Alabama</option>
+                                            <option data-select2-id="36">Alaska</option>
+                                            <option data-select2-id="37">California</option>
+                                            <option data-select2-id="38">Delaware</option>
+                                            <option data-select2-id="39">Tennessee</option>
+                                            <option data-select2-id="40">Texas</option>
+                                            <option data-select2-id="41">Washington</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group" style="flex: 2; margin-left: 10px;">
+                                        <input type="text" class="form-control" id="#" placeholder="Description" >
+                                    </div>
+                                    <div class="form-group" style="flex: 1; margin-left: 10px">
+                                        <input type="number" class="form-control" id="##" placeholder="Unit price">
+                                    </div>
+                                    <div class="form-group" style="flex: 1; margin-left: 10px">
+                                        <input type="number" class="form-control" id="" placeholder="Qty on hand">
+                                    </div>
+                                </div>
+                                <div class="form-group-wrapper" style="display: flex; justify-content: flex-end">
+                                    <div class="form-group" style="width: 25%; ">
+                                        <label for="exampleSearchDetails">Required Qty</label>
+                                        <div style="display: flex;">
+                                            <input type="text" class="form-control" id="exampleSearchDetails" placeholder="Enter Qty">
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="display:flex; justify-content: space-around;">
+                                        <button type="submit" class="btn btn-primary" style="width: 150px; margin-top: 30px; margin-left: 10px; background-color: indigo; color: white"><b>Add to Cart</b></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+
+                            <div class="card-footer">
+                                <!--if need, edit the footer-->
+                                <div class="form-group">
+                                    <!-- <label for="exampleSearchDetails">Search</label>
+                                     <div style="display: flex;" >
+                                         <input type="text" class="form-control" id="exampleSearchDetails" placeholder="Search here" style="width: 50%">
+                                         <button type="submit" class="btn btn-primary" style="width: 200px; margin-left: 20px" >Search</button>
+                                     </div>-->
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row" style="display: flex; justify-content: center">
+
+            <div class="card" style="width: 100%">
+                <div class="card-header border-transparent" style="background-color: indigo">
+                    <h3 class="card-title" style="color: white"><b>Cart</b></h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table m-0">
+                            <thead>
+                            <tr>
+                                <th>Item code</th>
+                                <th>Description</th>
+                                <th>Qty on hand</th>
+                                <th>Qty</th>
+                                <th>Unit price</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                <td>Call of Duty IV</td>
+                                <td><span class="badge badge-success">100</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#00a65a" data-height="20">50</div>
+                                </td>
+                                <td>500.00</td>
+                                <td>25000.00</td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge badge-warning">Pending</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                                </td>
+                                <td>500.00</td>
+                                <td>25000.00</td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                <td>iPhone 6 Plus</td>
+                                <td><span class="badge badge-danger">Delivered</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge badge-info">Processing</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge badge-warning">Pending</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                <td>iPhone 6 Plus</td>
+                                <td><span class="badge badge-danger">Delivered</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                <td>Call of Duty IV</td>
+                                <td><span class="badge badge-success">Shipped</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer clearfix">
+                    <a href="javascript:void(0)" class="btn btn-sm btn-info float-left" style="background-color: indigo">Place New Order</a>
+                    <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">Total cost : 2500 LKR</a>
+                </div>
+                <!-- /.card-footer -->
+            </div>
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+
+      <div id="search-orders" class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row" style="display: flex; justify-content: center">
+            <div class="col-lg-4 col-12">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3>44</h3>
+
+                        <p>Orders</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row" style="display: flex; justify-content: center">
+            <div class="card" style="width: 100%">
+                <div class="card-header" style="background-color: orange">
+                    <h3 class="card-title" >DataTable - Orders</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable dtr-inline" role="grid" aria-describedby="example1_info">
+                        <thead>
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Order ID</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Customer ID</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Order date</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Order time</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Total cost</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr role="row" class="odd">
+                            <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="even">
+                            <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
+                            <td>Firefox 1.5</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td>1.8</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="odd">
+                            <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
+                            <td>Firefox 2.0</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td>1.8</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="even">
+                            <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
+                            <td>Firefox 3.0</td>
+                            <td>Win 2k+ / OSX.3+</td>
+                            <td>1.9</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1 dtr-control">Gecko</td>
+                            <td>Camino 1.0</td>
+                            <td>OSX.2+</td>
+                            <td>1.8</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1 dtr-control">Gecko</td>
+                            <td>Camino 1.5</td>
+                            <td>OSX.3+</td>
+                            <td>1.8</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1 dtr-control">Gecko</td>
+                            <td>Netscape 7.2</td>
+                            <td>Win 95+ / Mac OS 8.6-9.2</td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1 dtr-control">Gecko</td>
+                            <td>Netscape Browser 8</td>
+                            <td>Win 98SE+</td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1 dtr-control">Gecko</td>
+                            <td>Netscape Navigator 9</td>
+                            <td>Win 98+ / OSX.2+</td>
+                            <td>1.8</td>
+                            <td>A</td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1 dtr-control">Gecko</td>
+                            <td>Mozilla 1.0</td>
+                            <td>Win 95+ / OSX.1+</td>
+                            <td>1</td>
+                            <td>A</td>
+                        </tr></tbody>
+                        <tfoot>
+                        <tr><th rowspan="1" colspan="1">Order ID</th><th rowspan="1" colspan="1">Customer ID</th><th rowspan="1" colspan="1">Order date</th><th rowspan="1" colspan="1">Order time</th><th rowspan="1" colspan="1">Total cost</th></tr>
+                        </tfoot>
+                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+
     </section>
     <!-- /.content -->
   </div>
