@@ -1,4 +1,5 @@
-$("#main-menu a").click(function(){
+$("#main-menu a").click(function(event){
+    event.preventDefault;
     $("#main-menu a").removeClass("active");
     $(this).addClass("active");
     $(".content-wrapper").addClass("d-none");
@@ -18,5 +19,8 @@ $("#main-menu a").click(function(){
         case "Search Orders":
             $("#search-orders").removeClass("d-none");
             break;
+        default:
+            break;
+    
     }
 });
