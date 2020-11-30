@@ -3,6 +3,8 @@ $("#main-menu a").click(function(event){
     $("#main-menu a").removeClass("active");
     $(this).addClass("active");
     $(".content-wrapper").addClass("d-none");
+
+    // ----method 01
     switch ($(this).text().trim()){
         case "Dashboard":
             $("#dashboard").removeClass("d-none");
@@ -23,4 +25,7 @@ $("#main-menu a").click(function(event){
             break;
     
     }
+
+    //----method 02 --> using data attributes
+    
 });
