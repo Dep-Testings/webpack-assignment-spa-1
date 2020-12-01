@@ -22,7 +22,7 @@ module.exports = {
             },
             {
                 test: /[.]html$/,
-                use: ['sass-loader']
+                use: ['html-loader']
             }
         ]
     },
